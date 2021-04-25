@@ -1,18 +1,13 @@
 import React from 'react'
-import { css } from '@emotion/react'
 import Layout from '../components/Layout'
-import { useTheme } from '../components/Theming'
 import Typist from 'react-typist';
 import TypistLoop from 'react-typist-loop';
 import Container from '../components/Container'
-import {  bpMinMD } from "../lib/breakpoints"
 import Cards from '../components/Cards'
 import Seo from '../components/seo'
 import { graphql, Link } from 'gatsby'
 
 const Hero = () => {
-  const theme = useTheme()
-
   const colors = [
     '#EC331B',
     '#FF9728',
@@ -24,52 +19,24 @@ const Hero = () => {
   ]
 
   return (
-    <section
-      css={css`
-        color: ${theme.colors.white};
-        width: 100%;
-        background: ${theme.colors.primary};
-        padding: 20px 0 20px 0;
-        display: flex;
-        justify-content: center;
-      `}
-    >
-      <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-        `}
-      >
-        <div css={css`
-          display: table; 
-          top: 0px;
-          left: 0px;
-          width: 100%;
-          height: 100%;
-          margin: 0 auto;
-          text-align: center;
-          z-index: 1;
-        `}>
-            <div css={css`
-              display: table-cell;
-              vertical-align: middle;
-              width: 100%;
-              font-family: "Helvetica Neue";
-              font-weight: 700;
-              font-size: 24px;
-              color: ${theme.colors.text};
-              line-height: 1.6em;
-              padding: 20px;
-              ${bpMinMD} {
-                font-size: 30px;
-              }
-            `}>
+    <section className="index-hero-section">
+      <div style={{
+        display: "flex",
+        flexDirection: "column"
+      }}>
+        <div style={{
+          display: "table", 
+          top: "0px",
+          left: "0px",
+          width: "100%",
+          height: "100%",
+          margin: "0 auto",
+          textAlign: "center",
+          zIndex: 1
+        }}>
+            <div className="index-hero">
                 <span>Hello, I am&nbsp;</span>
-                <span css={css`
-                  ${bpMinMD} {
-                    display: inline-block;
-                  }
-                `}>
+                <span className="index-hero-span">
                     <TypistLoop interval={200}>
                         {
                             [
@@ -92,11 +59,10 @@ const Hero = () => {
             </div>
           </div>
       </div>
-      <div
-        css={css`
-          height: 200px;
-          overflow: hidden;
-        `}
+      <div style={{
+        height: "200px",
+        overflow: "hidden"
+      }}
       />
     </section>
   )
@@ -108,19 +74,17 @@ export default function Index({data}) {
     <Layout>
       <Seo />
       <Hero />
-      <div
-        css={css`
-          padding-bottom: 0;
-        `}
+      <div style={{
+        paddingBottom: "0px"
+      }}
       >
-        <p
-          css={css`
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 20px;
-            font-size: 20px;
-            line-height: 1.6;
-          `}>
+        <p style={{
+          maxWidth: "750px",
+          margin: "0 auto",
+          padding: "20px",
+          fontSize: "20px",
+          lineHeight: "1.6"
+        }}>
             Hello, I am <Link to="/about">Lorenzo</Link>.
             I've been writing code for over 10 years (professionally for three and a half of those).
             Recently, I've started writing about systematic creativity, ethical technology, and personal growth too.

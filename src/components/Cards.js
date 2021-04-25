@@ -1,19 +1,10 @@
 import React from "react"
-import { css } from '@emotion/react'
 import Card from "./Card"
 import { Link } from "gatsby"
-import { bpMinMD } from "../lib/breakpoints"
 
 function Cards({items}) {
     return(
-        <div css={css`
-            ${bpMinMD} {
-              padding-top: 20px;
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
-              gap: 32px;
-            }
-          `}>
+        <div className="cards-div">
               {
                   items.map(({ node: post }) => {
                       return <div key={post.frontmatter.slug}>

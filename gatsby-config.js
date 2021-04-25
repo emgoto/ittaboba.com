@@ -97,6 +97,7 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-dark-mode',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
