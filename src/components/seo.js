@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import config from '../../../config/website'
 
 const Seo = ({ title, description, image, path, isBlogPost }) => (
   <StaticQuery
@@ -74,9 +73,6 @@ Seo.propTypes = {
 
 Seo.defaultProps = {
   isBlogPost: false,
-  title: config.siteTitle,
-  description: config.siteDescription,
-  image: config.siteImage
 }
 
 export default Seo

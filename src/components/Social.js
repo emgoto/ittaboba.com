@@ -2,9 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { useTheme } from './Theming'
 import { css } from '@emotion/react'
-import config from '../../config/website'
 
-export const Twitter = ({ url = `${config.twitter}` }) => {
+export const Twitter = ({ url }) => {
   const theme = useTheme()
   return (
     <Link
@@ -35,7 +34,7 @@ export const Twitter = ({ url = `${config.twitter}` }) => {
   )
 }
 
-export const LinkedIn = ({ url = `${config.linkedin}` }) => {
+export const LinkedIn = ({ url }) => {
   const theme = useTheme()
   return (
     <Link
@@ -65,7 +64,7 @@ export const LinkedIn = ({ url = `${config.linkedin}` }) => {
   )
 }
 
-export const GitHub = ({ url = `${config.github}` }) => {
+export const GitHub = ({ url }) => {
   const theme = useTheme()
   return (
     <Link
